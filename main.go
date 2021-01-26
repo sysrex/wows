@@ -1,8 +1,8 @@
 package main
 
 import (
+	"./controllers"
 	"github.com/gin-gonic/gin"
-	"github.com/sysrex/wows/controllers"
 )
 
 func main() {
