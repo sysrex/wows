@@ -5,27 +5,26 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
 
     <title>WOWS!</title>
   </head>
   <body>
       <div class="container">
-        <h1>[RJCTS] Clan page</h1>
+        <h1>{{.clan.Data.Num500201233.Name}}</h1>
 
         <table class="table table-striped">
             <thead>
                 <tr>
-                  <th scope="col">#</th>
+                  <th scope="col">Player ID</th>
                   <th scope="col">Username</th>
                 </tr>
             </thead>
             <tbody>
-                <p>{{.Data.Num500201233.Name}}</p>
-                {{range .Data.Num500201233.MembersIds}}
+                {{range .clan.Data.Num500201233.MembersIds}}
                 <tr>
-                    <th scope="row">ID</th>
+                    <th scope="row">{{.}}</th>
                     <td>{{.}}</td>
                 </tr>
                 {{end}}
@@ -33,6 +32,6 @@
         </table>
       </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>      
   </body>
 </html>
