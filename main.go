@@ -10,9 +10,8 @@ func main() {
 	r.LoadHTMLGlob("views/*.html")
 
 	// Routes
-	r.GET("/players", controllers.FindPlayers)
-	r.POST("/players", controllers.CreatePlayers)
+	r.GET("/", controllers.Home)
 
 	// Run the server
-	r.Run()
+	r.Run(":8080")
 }
