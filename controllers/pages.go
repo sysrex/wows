@@ -9,13 +9,14 @@ import (
 )
 
 // Clan struct
+// Clan struct
 type Clan struct {
 	Status string `json:"status"`
 	Meta   struct {
 		Count int `json:"count"`
 	} `json:"meta"`
 	Data struct {
-		Num500201233 struct {
+		Clan struct {
 			MembersCount    int         `json:"members_count"`
 			Name            string      `json:"name"`
 			CreatorName     string      `json:"creator_name"`
@@ -44,7 +45,7 @@ type Player struct {
 		Hidden interface{} `json:"hidden"`
 	} `json:"meta"`
 	Data struct {
-		Num500827075 struct {
+		Player struct {
 			LastBattleTime int         `json:"last_battle_time"`
 			AccountID      int         `json:"account_id"`
 			LevelingTier   int         `json:"leveling_tier"`
@@ -158,6 +159,9 @@ func Home(c *gin.Context) {
 	player := Player{}
 
 	getJSON("https://api.worldofwarships.eu/wows/clans/info/?application_id=2fe567692a1f2cbfba128363247b542d&clan_id=500201233", &clan)
+
+	for i range := 
+
 	getJSON("https://api.worldofwarships.eu/wows/account/info/?application_id=2fe567692a1f2cbfba128363247b542d&account_id=500827075", &player)
 
 	c.HTML(http.StatusOK, "index.html", gin.H{
